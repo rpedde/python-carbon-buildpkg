@@ -1,0 +1,19 @@
+Source: python-carbon
+Section: python
+Priority: optional
+Maintainer: Ilya Zakreuski <izakreuski@gmail.com>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7.0.50), python-support (>= 0.90), python (>= 2.5)
+XS-Python-Version: >= 2.5
+Standards-Version: 3.8.4
+Homepage: https://launchpad.net/graphite
+
+Package: python-carbon
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, python-whisper, python-twisted-core
+Description: backend data caching and persistence daemon for Graphite
+ Client applications connect to the running carbon-cache daemon on
+ port 2003 and send it lines of text. Once you've got some clients
+ sending data to carbon-cache, you can view graphs of that data in the
+ Graphite frontend webapp.
+

@@ -1,0 +1,15 @@
+Index: carbon-0.9.6/lib/carbon/storage.py
+===================================================================
+--- carbon-0.9.6.orig/lib/carbon/storage.py	2010-06-22 15:12:25.000000000 +0400
++++ carbon-0.9.6/lib/carbon/storage.py	2010-06-22 15:13:07.000000000 +0400
+@@ -22,8 +22,8 @@
+   import pickle
+ 
+ 
+-STORAGE_SCHEMAS_CONFIG = 'conf/storage-schemas.conf'
+-STORAGE_LISTS_DIR = 'storage/lists'
++STORAGE_SCHEMAS_CONFIG = '/etc/carbon/storage-schemas.conf'
++STORAGE_LISTS_DIR = '/var/lib/graphite/storage/lists'
+ 
+ 
+ def getFilesystemPath(metric):

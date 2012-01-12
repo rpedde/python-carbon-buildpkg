@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	[ -f debian/python-carbon/usr/bin/carbon-cache ] || mv debian/python-carbon/usr/bin/carbon-cache.py debian/python-carbon/usr/bin/carbon-cache
+	[ -f debian/python-carbon/usr/bin/carbon-relay ] || mv debian/python-carbon/usr/bin/carbon-relay.py debian/python-carbon/usr/bin/carbon-relay
+	cp -aR debian/python-carbon/usr/storage debian/python-carbon/var/lib/graphite/ && rm -rf debian/python-carbon/usr/storage
+	[ ! -d debian/python-carbon/usr/conf ] || rm -r debian/python-carbon/usr/conf
+	dh_install
+
+override_dh_installinit:
+	dh_installinit --name=carbon-cache --no-start
+

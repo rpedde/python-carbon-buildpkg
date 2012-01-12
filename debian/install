@@ -1,0 +1,2 @@
+debian/carbon.conf /etc/carbon
+debian/storage-schemas.conf /etc/carbon

@@ -1,0 +1,13 @@
+python-carbon (0.9.9-1) stable; urgency=low
+
+  * Non-maintainer upload.
+  * bump to 0.9.9
+
+ -- Ron Pedde <ron@pedde.com>  Thu, 12 Jan 2012 04:48:55 +0000
+
+python-carbon (0.9.6-1UNRELEASED4) maverick; urgency=low
+
+  * Initial release (Closes: #0)
+
+ -- Ilya Zakreuski <izakreuski@gmail.com>  Tue, 15 Jun 2010 13:51:58 +0300
+
