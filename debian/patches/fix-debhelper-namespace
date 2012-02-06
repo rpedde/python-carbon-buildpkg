@@ -8,10 +8,37 @@
 +__import__('pkg_resources').declare_namespace(__name__)
 --- a/setup.py
 +++ b/setup.py
-@@ -30,5 +30,6 @@
+@@ -3,13 +3,12 @@
+ import os
+ from glob import glob
+ 
+-if os.environ.get('USE_SETUPTOOLS'):
+-  from setuptools import setup
+-  setup_kwargs = dict(zip_safe=0)
+-
+-else:
+-  from distutils.core import setup
+-  setup_kwargs = dict()
++try:
++  from setuptools import setup, find_packages
++except ImportError:
++  from ez_setup import use_setuptools
++  use_setuptools()
++  from setuptools import setup, find_packages
+ 
+ 
+ storage_dirs = [ ('storage/whisper',[]), ('storage/lists',[]),
+@@ -24,11 +23,11 @@
+   author_email='chrismd@gmail.com',
+   license='Apache Software License 2.0',
+   description='Backend data caching and persistence daemon for Graphite',
+-  packages=['carbon', 'carbon.aggregator', 'twisted.plugins'],
++  packages=find_packages('lib'),
+   package_dir={'' : 'lib'},
+   scripts=glob('bin/*'),
    package_data={ 'carbon' : ['*.xml'] },
    data_files=storage_dirs + conf_files,
    install_requires=['twisted', 'txamqp'],
-+  namespace_packages=['twisted', 'twisted.plugins'],
-   **setup_kwargs
+-  **setup_kwargs
++  namespace_packages=['twisted', 'twisted.plugins']
  )
