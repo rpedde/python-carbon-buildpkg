@@ -1,0 +1,17 @@
+--- /dev/null
++++ b/lib/twisted/__init__.py
+@@ -0,0 +1 @@
++__import__('pkg_resources').declare_namespace(__name__)
+--- /dev/null
++++ b/lib/twisted/plugins/__init__.py
+@@ -0,0 +1 @@
++__import__('pkg_resources').declare_namespace(__name__)
+--- a/setup.py
++++ b/setup.py
+@@ -30,5 +30,6 @@
+   package_data={ 'carbon' : ['*.xml'] },
+   data_files=storage_dirs + conf_files,
+   install_requires=['twisted', 'txamqp'],
++  namespace_packages=['carbon', 'twisted.plugins'],
+   **setup_kwargs
+ )
