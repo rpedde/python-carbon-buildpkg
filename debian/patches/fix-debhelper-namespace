@@ -12,6 +12,6 @@
    package_data={ 'carbon' : ['*.xml'] },
    data_files=storage_dirs + conf_files,
    install_requires=['twisted', 'txamqp'],
-+  namespace_packages=['carbon', 'twisted.plugins'],
++  namespace_packages=['twisted', 'twisted.plugins'],
    **setup_kwargs
  )
