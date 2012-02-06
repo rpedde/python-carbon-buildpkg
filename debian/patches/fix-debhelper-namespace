@@ -28,7 +28,7 @@
  
  
  storage_dirs = [ ('storage/whisper',[]), ('storage/lists',[]),
-@@ -24,11 +23,14 @@
+@@ -24,11 +23,12 @@
    author_email='chrismd@gmail.com',
    license='Apache Software License 2.0',
    description='Backend data caching and persistence daemon for Graphite',
@@ -37,11 +37,9 @@
    package_dir={'' : 'lib'},
    scripts=glob('bin/*'),
    package_data={ 'carbon' : ['*.xml'] },
-+  intall_package_data=True,
++  install_package_data=True,
    data_files=storage_dirs + conf_files,
    install_requires=['twisted', 'txamqp'],
 -  **setup_kwargs
-+  namespace_packages=['twisted', 'twisted.plugins'],
-+  py_moduiles=[]
-+
++  namespace_packages=['twisted', 'twisted.plugins']
  )
