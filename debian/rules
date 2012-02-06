@@ -1,6 +1,7 @@
 #!/usr/bin/make -f
 
 DEB_PYTHON_SYSTEM=pysupport
+EXPORT DH_VERBOSE=1
 
 %:
 	dh $@
@@ -15,3 +16,5 @@ override_dh_install:
 override_dh_installinit:
 	dh_installinit --name=carbon-cache --no-start
 
+override_dh_pysupport:
+	dh_pysupport

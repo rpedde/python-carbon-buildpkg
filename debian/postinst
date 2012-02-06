@@ -4,9 +4,7 @@ set -e
 
 #DEBHELPER#
 
-if [ "$1" = "configure" ]; then
-    update-python-modules --post-install
-fi
+update-python-modules --post-install
 
 
 for i in `find /var/lib/graphite` ; do
