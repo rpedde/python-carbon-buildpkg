@@ -15,6 +15,9 @@ for i in `find /var/lib/graphite` ; do
     if ! dpkg-statoverride --list /var/log/graphite >/dev/null 2>&1; then
 	dpkg-statoverride --update --add www-data www-data 4750 /var/log/graphite
     fi
+
+    # force plugins to rewrite cache
+    twistd --help >/dev/null 2>&1
 done
 
 exit 0

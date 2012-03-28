@@ -10,7 +10,7 @@ Standards-Version: 3.8.4
 
 Package: python-carbon
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, python-whisper, python-twisted-core
+Depends: ${misc:Depends}, ${python:Depends}, python-whisper, python-twisted-core, python-central
 Description: backend data caching and persistence daemon for Graphite
  Client applications connect to the running carbon-cache daemon on
  port 2003 and send it lines of text. Once you've got some clients

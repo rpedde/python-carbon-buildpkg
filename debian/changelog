@@ -1,3 +1,9 @@
+python-carbon (0.9.9-6) stable; urgency=low
+
+  * register twistd plugin cache on debian
+
+ -- Ron Pedde <ron@pedde.com>  Wed, 28 Mar 2012 16:28:10 -0500
+
 python-carbon (0.9.9-5) stable; urgency=low
 
   * create logfile on startup
