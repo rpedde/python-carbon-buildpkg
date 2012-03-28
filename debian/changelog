@@ -1,3 +1,10 @@
+python-carbon (0.9.9-3) stable; urgency=low
+
+  * update default config to log less
+  * use --config flag on daemon startup
+
+ -- Ron Pedde <ron@pedde.com>  Wed, 28 Mar 2012 11:55:29 -0500
+
 python-carbon (0.9.9-2) stable; urgency=low
 
   * switch to pycentral

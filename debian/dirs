@@ -1,3 +1,4 @@
 etc/carbon
 var/lib/graphite
 var/lib/graphite/storage/log/carbon-cache
+var/log/carbon

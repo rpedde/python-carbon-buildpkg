@@ -52,7 +52,8 @@ do_start()
         start-stop-daemon --start --quiet --startas $NAME --pidfile $PIDFILE \
             --test > /dev/null || return 1
         start-stop-daemon --start --quiet --exec $DAEMON --name $NAME \
-            --chuid www-data -- --pidfile $PIDFILE start || return 2
+            --chuid www-data -- --config /etc/carbon/carbon.conf \
+	    --pidfile $PIDFILE start || return 2
 }
 
 #
