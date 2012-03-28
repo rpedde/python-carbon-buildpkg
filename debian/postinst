@@ -4,7 +4,7 @@ set -e
 
 #DEBHELPER#
 
-#update-python-modules --post-install
+#pycentral pkginstall python-carbon
 
 for i in `find /var/lib/graphite` ; do
     # only do something when no setting exists
