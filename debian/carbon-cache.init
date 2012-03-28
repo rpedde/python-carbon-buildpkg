@@ -40,6 +40,10 @@ VERBOSE=on
 [ -d "/var/run/$NAME" ] || mkdir /var/run/$NAME \
     && chown www-data:www-data /var/run/$NAME
 
+# Create log dir in /var/log if does not exist
+[ -d "/var/log/carbon" ] || mkdir /var/log/carbon \
+    && chown www-data:www-data /var/log/carbon
+
 #
 # Function that starts the daemon/service
 #
